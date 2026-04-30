@@ -11,17 +11,10 @@ def cargar_todo():
 # ==========================================
 # El orden importa: el primero será 'Primera' y el segundo 'Segunda'
     archivos = [
-        "RB ENGLAND 2526 24-03-26.xlsx",  
-        "RB FRANCE 2526 24-03-26.xlsx",   
-        "RB GERMANY 2526 24-03-26.xlsx",   
-        "RB ITALY 2526 24-03-26.xlsx",   
-        "RB SPAIN 2526 24-03-26.xlsx",   
-        
-        "RB ENGLAND 2425.xlsx",   
-        "RB FRANCE 2425.xlsx",   
-        "RB GERMANY 2425.xlsx",   
-        "RB ITALY 2425.xlsx",   
-        "RB SPAIN 2425.xlsx",     
+        "DM EGYPT.xlsx",  
+        "DM MARRUECOS.xlsx",   
+        "DM SOUTH AFRICA.xlsx",   
+        "DM TUNEZ.xlsx" 
     ]
     
     
