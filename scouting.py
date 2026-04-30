@@ -419,7 +419,7 @@ def rankings(df):
     
             }
         },
-        "DM": {
+        "DMF": {
             "defensivas": ['Interceptaciones/90', 'Entradas/90', "Duelos defensivos/90", 
                         "Duelos aéreos en los 90", "Faltas/90"],
             "ofensivas": ['Pases progresivos/90', 'Carreras en progresión/90', 
