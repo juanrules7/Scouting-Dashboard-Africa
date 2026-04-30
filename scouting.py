@@ -269,20 +269,41 @@ def cargar_posesión(list_2526):
             # "Brazil": possession_mapping_brazil, etc.
         }
     }
-    
-    # Aplicar posesión a cada archivo individual de tus listas
-    for df in list_2526:
-        liga = df['Liga'].iloc[0]
-        mapa = master_possession["25/26"].get(liga, {})
-        df['team_possession'] = df['Equipo'].map(mapa).fillna(50.0)
-    
-    for df in list_2425:
-        liga = df['Liga'].iloc[0]
-        mapa = master_possession["24/25_2025"].get(liga, {})
-        df['team_possession'] = df['Equipo'].map(mapa).fillna(50.0)
-    
-    print("✅ Columna 'team_possession' añadida a cada archivo individualmente.")
+    # ... (tus diccionarios master_possession arriba)
 
+    # Definimos una función interna para no repetir código
+    def procesar_listas_posesion(lista_dfs, temporada_key):
+        for df in lista_dfs:
+            if df.empty:
+                continue
+                
+            # Obtenemos el nombre de la liga de este DataFrame
+            liga = df['Liga'].iloc[0]
+            
+            # Buscamos el mapa. Si la liga no existe en master_possession, devuelve un dict vacío {}
+            mapa = master_possession.get(temporada_key, {}).get(liga, {})
+            
+            # Si el mapa está vacío, imprimimos un aviso pero el código sigue
+            if not mapa:
+                print(f"⚠️ Aviso: No hay datos de posesión para la liga '{liga}' en la temporada {temporada_key}. Usando 50%.")
+            
+            # Identificamos la columna del equipo (por si varía entre 'Equipo' y 'Team')
+            col_equipo = 'Equipo' if 'Equipo' in df.columns else 'Team'
+            
+            if col_equipo in df.columns:
+                # Mapeamos. Los equipos que no coincidan o ligas faltantes recibirán 50.0
+                df['team_possession'] = df[col_equipo].map(mapa).fillna(50.0)
+            else:
+                # Si ni siquiera existe la columna de equipo, ponemos 50 por defecto
+                df['team_possession'] = 50.0
+        return lista_dfs
+
+    # Aplicamos la lógica a ambas listas
+    list_2526 = procesar_listas_posesion(list_2526, "25/26")
+
+    print("✅ Proceso de posesión finalizado.")
+
+    # IMPORTANTE: Debes devolver ambas listas para no perder datos
     return list_2526
     
     
