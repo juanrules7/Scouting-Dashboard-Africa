@@ -349,7 +349,7 @@ def rankings(df):
     # ==========================================
     # 1. SELECTOR DE POSICIÓN
     # ==========================================
-    TARGET_POS = "RB"
+    TARGET_POS = "DMF"
     
     mapeo_grupos = {
         "RCMF": "CMF", "LCMF": "CMF",
