@@ -31,7 +31,7 @@ def cargar_todo():
     def limpiar_nombre_liga(ruta):
         # 'RB SPAIN 2 2526.xlsx' -> 'SPAIN 2'
         nombre = os.path.basename(ruta).replace(".xlsx", "").upper()
-        nombre = re.sub(r'^RB\s+', '', nombre)
+        nombre = re.sub(r'^(RB|DM)\s+', '', nombre) # Borra tanto RB como DM
         nombre = re.sub(r'\s+\d{2}-\d{2}-\d{2}', '', nombre) 
         nombre = re.sub(r'\s+(2425|2526|2025)', '', nombre) 
         return nombre.strip()
