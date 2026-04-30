@@ -247,6 +247,7 @@ def cargar_posesión(list_2526):
     
             # Añade aquí el resto de ligas 2526
         }
+    }
         """
         "24/25_2025": {
             "Spain": convertir_a_mapeo(team_possession_laliga_2425),
@@ -270,7 +271,7 @@ def cargar_posesión(list_2526):
             # "Brazil": possession_mapping_brazil, etc.
         }
         """
-    }
+    
     # ... (tus diccionarios master_possession arriba)
 
     # Definimos una función interna para no repetir código
