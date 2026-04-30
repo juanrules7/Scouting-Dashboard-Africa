@@ -277,8 +277,7 @@ def cargar_posesión(list_2526):
     # Definimos una función interna para no repetir código
     # Aplicamos la posesión SOLO a la lista de la temporada 25/26
     for df in list_2526:
-        if df.empty:
-            continue
+        
         
         # Sacamos el nombre de la liga (asumiendo que en cargar_todo la guardaste en la col 'Liga')
         liga_nombre = df['Liga'].iloc[0]
