@@ -284,6 +284,17 @@ with tab4:
         # Prepare columns for the view (excluding Final_Score)
         # We show the basics + all the ratings to compare
         cols_ver = ['Jugador', 'Equipo', 'Liga', 'Edad'] + metrics_search
+
+        # Verificamos si la columna de ordenación existe en el DataFrame
+        if col_sort_search not in df_res.columns:
+            st.warning(f"La columna '{col_sort_search}' no existe. Ordenando por 'Final_Score' por defecto.")
+            col_sort_search = "Final_Score" if "Final_Score" in df_res.columns else df_res.columns[0]
+
+        # Asegúrate de que la columna de ordenación esté en las columnas que vas a mostrar
+        if col_sort_search not in cols_ver:
+            cols_ver.append(col_sort_search)
+
+        # Ahora sí, ordenamos
         
         # Sort and limit to top 50
         df_final_view = df_res[cols_ver].sort_values(by=col_sort_search, ascending=False).head(50)
