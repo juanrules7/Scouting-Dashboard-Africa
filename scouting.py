@@ -88,7 +88,7 @@ def cargar_todo():
     return list_2425, list_2526
 
 import json
-def cargar_posesión(list_2526, list_2425):
+def cargar_posesión(list_2526):
     
     def convertir_a_mapeo(texto_json):
         """Convierte el texto sucio con 'null' en un diccionario de Python"""
