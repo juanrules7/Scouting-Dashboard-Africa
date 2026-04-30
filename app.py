@@ -29,23 +29,20 @@ LEAGUE_MAP = {
 if 'df_2425' not in st.session_state or 'df_2526' not in st.session_state:
     with st.spinner('Accessing databases and calculating performance ranks...'):
         # 1. Fetch raw lists
-        list_2425_raw, list_2526_raw = sg.cargar_todo()
+        list_2526_raw = sg.cargar_todo()
         
         # 2. Possession Adjustments
-        list_2526_proc, list_2425_proc = sg.cargar_posesión(list_2526_raw, list_2425_raw)
+        list_2526_proc = sg.cargar_posesión(list_2526_raw)
         
         # 3. Concatenate to DataFrames
         df_2526 = pd.concat(list_2526_proc, ignore_index=True)
-        df_2425 = pd.concat(list_2425_proc, ignore_index=True)
 
         # --- APPLY LEAGUE MAPPING ---
         # We replace the raw names with the professional names before saving to session_state
         df_2526['Liga'] = df_2526['Liga'].map(LEAGUE_MAP).fillna(df_2526['Liga'])
-        df_2425['Liga'] = df_2425['Liga'].map(LEAGUE_MAP).fillna(df_2425['Liga'])
         
         # 4. Apply Ranking Algorithms
         st.session_state.df_2526 = sg.rankings(df_2526)
-        st.session_state.df_2425 = sg.rankings(df_2425)
 
 # --- App Header ---
 st.title("⚽ Scouting Platform")
