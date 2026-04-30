@@ -283,7 +283,7 @@ def cargar_posesión(list_2526, list_2425):
     
     print("✅ Columna 'team_possession' añadida a cada archivo individualmente.")
 
-    return list_2526, list_2425
+    return list_2526
     
     
 def limpieza_posiciones():
