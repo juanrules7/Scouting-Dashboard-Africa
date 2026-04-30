@@ -416,11 +416,10 @@ def rankings(df):
                 "Crossing" : ["Crossing/90_OPAdj", "Precisión centros, %"],
                 "Assists" : ["xA/90_OPAdj"],
                 "Desmarques" : ["Desmarques/90_OPAdj", "Precisión desmarques, %"]
-    
             }
         },
         "DMF": {
-            "defensivas": [['Interceptaciones/90', 'Entradas/90', "Duelos defensivos/90", 
+            "defensivas": ['Interceptaciones/90', 'Entradas/90', "Duelos defensivos/90", 
                         "Faltas/90", "Duelos aéreos en los 90"],
             "ofensivas": ['Pases progresivos/90', 'Carreras en progresión/90', 
                         'Pases largos/90', "Centros/90", 
