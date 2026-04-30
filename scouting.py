@@ -517,6 +517,7 @@ def rankings(df):
         
     }
     elo_map = {
+        "Egipto": 1.0, "Sudáfrica": 1.0, "Marruecos": 1.0, "Túnez": 1.0, 
         "Spain": 1.0, "USA": 0.904, "England": 1.053, "Italy": 0.986, 
         "Germany": 0.985, "France": 0.976, "Belgium": 0.932, "Portugal": 0.928, 
         "Argentina": 0.927, "Brazil": 0.927, "England 2": 0.924, "Denmark": 0.914, 
