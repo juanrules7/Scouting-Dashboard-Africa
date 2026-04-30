@@ -64,7 +64,6 @@ with st.expander("📖 READ FIRST: Methodology, Calibration & PAdj Logic", expan
     but a calculated prediction of his floor and ceiling within **another league**. Below are the power 
     rankings of the leagues used in the scouting process, established by **Opta (24-03-2026)**.
     """)
-    st.image("Power Rankings 24-03-2026.png", caption="Opta League Power Rankings 2026")
     st.markdown("### ⚖️ Possession Adjustment (PAdj)")
     st.write("""
     To ensure this analysis reflects true technical quality rather than team style, all data has been 
