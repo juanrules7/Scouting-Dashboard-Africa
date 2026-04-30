@@ -23,7 +23,11 @@ LEAGUE_MAP = {
     "BRAZIL": "Brasileirão",
     "ARGENTINA": "Primera División",
     "USA": "MLS",
-    "MEXICO": "Liga MX"
+    "MEXICO": "Liga MX",
+    "MARRUECOS": "Marruecos",
+    "TUNEZ": "Túnez",
+    "SOUTH AFRICA": "Sudáfrica",
+    "EGYPT": "Egipto"
 }
 # 2. Initial Data Loading & Session State Management
 if 'df_2425' not in st.session_state or 'df_2526' not in st.session_state:
