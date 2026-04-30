@@ -394,7 +394,7 @@ def rankings(df):
                 "Creativity" : ["xA/90_OPAdj"],
                 "Runs in Behind" : ["Desmarques/90_OPAdj", "Precisión desmarques, %"],
                 "Goal Threat" : ["xG/90_OPAdj"],
-                "Aerial Duels": ["Duelos aéreos en los 90_PAdj", "Duelos aéreos ganados, %"],
+                "Aerial Duels": ["Duelos aéreos en los 90_PAdj", "Duelos aéreos ganados, %"]
     
             }
         },
@@ -420,19 +420,24 @@ def rankings(df):
             }
         },
         "DMF": {
-            "defensivas": ['Interceptaciones/90', 'Entradas/90', "Duelos defensivos/90", 
-                        "Duelos aéreos en los 90", "Faltas/90"],
+            "defensivas": [['Interceptaciones/90', 'Entradas/90', "Duelos defensivos/90", 
+                        "Faltas/90", "Duelos aéreos en los 90"],
             "ofensivas": ['Pases progresivos/90', 'Carreras en progresión/90', 
-                        'Pases largos/90', "Pases/90"],
+                        'Pases largos/90', "Centros/90", 
+                        "Regates/90", "xA/90", "Desmarques/90", "xG/90"],
             "pilares": {
                 "Aggressiveness": ["Faltas/90_PAdj", "Entradas/90_PAdj"],
-                "Aerial": ["Duelos aéreos en los 90_PAdj", "Duelos aéreos ganados, %"],
-                "Duels": ["Duelos defensivos ganados, %", "Duelos defensivos/90_PAdj"],
-                "Reading" : ["Interceptaciones/90_PAdj"],
-                "Passing_Volume": ["Pases/90_OPAdj", "Precisión pases, %"],
-                "Verticality": ["Pases progresivos/90_OPAdj", "Precisión pases progresivos, %"],
-                "Long_Ball": ["Pases largos/90_OPAdj", "Precisión pases largos, %"],
-                "Dribbling": ["Carreras en progresión/90_OPAdj"]
+                "Defensive Duels": ["Duelos defensivos ganados, %", "Duelos defensivos/90_PAdj"],
+                "Interceptions" : ["Interceptaciones/90_PAdj"],
+                "Progressive Passing": ["Pases progresivos/90_OPAdj", "Precisión pases progresivos, %"],
+                "Long Passing": ["Pases largos/90_OPAdj", "Precisión pases largos, %"],
+                "Carrying": ["Carreras en progresión/90_OPAdj"],
+                "Dribbling" : ["Regates/90_OPAdj", "Regates realizados, %"],
+                "Crossing" : ["Crossing/90_OPAdj", "Precisión centros, %"],
+                "Creativity" : ["xA/90_OPAdj"],
+                "Runs in Behind" : ["Desmarques/90_OPAdj", "Precisión desmarques, %"],
+                "Goal Threat" : ["xG/90_OPAdj"],
+                "Aerial Duels": ["Duelos aéreos en los 90_PAdj", "Duelos aéreos ganados, %"]
             }
         },
         "CMF": {
