@@ -1,5 +1,5 @@
 import streamlit as st
-import scouting_general as sg
+import scouting as sg
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
