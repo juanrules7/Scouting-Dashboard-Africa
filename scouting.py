@@ -85,8 +85,7 @@ def cargar_todo():
     print(f"PROCESAMIENTO COMPLETADO")
     print(f"Ligas listas para procesar en 24/25: {len(list_2425)}")
     print(f"Ligas listas para procesar en 25/26: {len(list_2526)}")
-    return list_2526
-
+    return list_2425, list_2526
 import json
 def cargar_posesión(list_2526):
     
