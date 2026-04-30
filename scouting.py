@@ -11,10 +11,10 @@ def cargar_todo():
 # ==========================================
 # El orden importa: el primero será 'Primera' y el segundo 'Segunda'
     archivos = [
-        "DM EGYPT.xlsx",  
-        "DM MARRUECOS.xlsx",   
-        "DM SOUTH AFRICA.xlsx",   
-        "DM TUNEZ.xlsx" 
+        "DM EGYPT 2526.xlsx",  
+        "DM MARRUECOS 2526.xlsx",   
+        "DM SOUTH AFRICA 2526.xlsx",   
+        "DM TUNEZ 2526.xlsx" 
     ]
     
     
